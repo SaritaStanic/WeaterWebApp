@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!--<meta charset="UTF-8">-->
+<!--<meta http-equiv="X-UA-Compatible" content="IE=egde">-->
+<meta name ="viewport" content="with=device-width,initial scale=1.0"> 
+<title>Weather Web-App</title>
+<script src="https://kit.fontawesome.com/14988f2aa2.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Anek+Tamil:
+wdth,wght@100,300;100,500;106.4,484&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+ 	
+</head> 
+	<body>
+		<header>
+		<section class="pre-header">
+			<nav>
+				<img class="logo" src="https://www.onlygfx.com/wp-content/uploads/2016/10/watercolor-cloud-8.png" alt="logo">
+				
+				<ul class="navigation">
+					<li><a href="#">HOME</a> </li>
+					<li><a href="#">ABOUT</a> </li>
+					<li><a href="#">CONTACT</a> </li>
+				</ul>
+			</nav>
+
+		</section>
+	</header>
+<!--- CLASS HEADER --------------------------------------------------------------------------------------------------------->
+		<section class="header">
+			<nav>
+				<!-- the logo insertion-->
+				
+			
+			<!--adding some links here which are actually buttons -->
+				<div class="nav-links" id="navLinks">
+					<i class="fa-regular fa-rectangle-xmark" onclick="hideMenu()"></i>
+					<ul>
+						<li><a href="">HOME</a></li>
+						<li><a href="">ABOUT</a></li>
+						<li><a href="">TOMORROW</a></li>
+						<li><a href="">CONTACT</a></li>
+						<li><a href="">LOCATION</a></li>
+						<li><a href="">MEDIA</a></li>
+					</ul>	
+
+				</div>
+				<i class="fa-regular fa-circle-chevron-down" onclick="showMenu"></i>
+			</nav>
+				
+			<div class="text-box"> <!-- where we also put the image-->
+
+				<h1>The realest weather out there</h1>
+				<p>This is a weather 
+					web app created for Assignment 2 of2022
+					of Web Applications Development. Enjoy the ride!
+				</p>
+				<!--adding a button with anchor tag-->
+				<a href="login_page.php#loging-in" id="loging-in" class="hero-btn"  >Click to load weather</a>
+
+
+
+
+			</div>
+		</section>
+<!-- END HEADER -------------------------------------------------------------------------- --->
+<!-- CLASS WEATHER WHERE THOSE 3 SQUARES ARE -->
+<section class="weather">
+	<h1>The Weather Today</h1>
+	<p>We are all hoping for a happy babyface sun...</p>
+	<div class="row">
+		<div class="weather-col">
+			<h3>How it is</h3>
+			<p>Something to be noted about the weather</p>
+
+		</div>
+		<div class="weather-col">
+			<h3>Degrees</h3>
+			<p>Something to be noted about the weather</p>
+
+		</div>
+		<div class="weather-col">
+			<h3>How it feels</h3>
+			<p>Something to be noted about the weather</p>
+
+		</div>
+	</div>
+</section>	
+<!-- END CLASS WHERE THOSE 3 SQUARES ARE -------------------------------------------------- -->
+<!-- CLASS LOCATION WITH 3 PICS WITH HOVERING EFFECT ----------------------------------------------------------------------- -->
+<section class="location">
+	<H1>location	</H1>
+	<p>In order to provide weather the location  needs to be known</p>
+	<div class="row">
+		<div class="location-row">
+				<img src="https://www.publicdomainpictures.net/pictures/40000/velka/pink-clouds.jpg" >
+					<div class="layer">
+					<h3>GREECE</h3>
+					</div>
+	
+		</div>
+			<div class="location-row">
+				<img src="https://www.publicdomainpictures.net/pictures/40000/velka/pink-clouds.jpg" >
+				<div class="layer">
+				<h3>SERBIA</h3>
+				</div>
+		</div>
+		<div class="location-row">
+			<img src="https://www.publicdomainpictures.net/pictures/40000/velka/pink-clouds.jpg" >
+			<div class="layer">
+			<h3>BELGIUM</h3>
+		</div>
+</div>
+	</div>
+
+</section>
+<!-- END CLASS LOCATION  WITH 3 PICS WITH HOVERING EFFECT------------------------------------------------------------------- -->
+
+<!-- CLASS  FOR WEATHER THIS WEEK -->
+<section class="weekWeather">
+	<h1>Weather forecast </h1>
+	<p>The weater forecast for this week looks like:</p>
+
+	<div class="row">
+		<div class="weekWeather-col">
+			<img src="https://wallpaperboat.com/wp-content/uploads/2020/06/04/43016/pink-cloud-02.jpg" >
+			<h3>Weather and Body</h3>
+			<p>Watch out for the weather! if your head hurts
+				 and you feel depressed 
+				it is probably because of the bad weather. 
+				Please consider taking some warm beverages
+				 and spending time with your loved ones</p>
+		</div>
+		<div class="weekWeather-col">
+			<img src="https://wallpaperboat.com/wp-content/uploads/2020/06/04/43016/pink-cloud-02.jpg" >
+			<h3>Weather and Animals</h3>
+			<p>Animals are great detectors of weather. 
+				If your cat is hiding more often that
+				 is because a storm is comming
+			</p>
+		</div>
+		<div class="weekWeather-col">
+			<img src="https://wallpaperboat.com/wp-content/uploads/2020/06/04/43016/pink-cloud-02.jpg" >
+			<h3>Weather and Plants</h3>
+			<p> Nature knows what it needs and 
+				plants are perfectly adapted to the
+				 changes of the weather.
+			However if you have pots of flowers, 
+			water them, don't let them wilt! </p>
+		</div>
+	</div>
+
+
+</section>
+<!-- END CLASS FOR WEATHER THIS WEEK-->
+
+
+
+<!-- CLASS TESTIMONIALS---------------------------------------------------------------------------------------------------- -->
+<section class="testimonials">
+<h1>What users say </h1>
+	<p>Only the truest comments are added</p>
+	<div class="row">
+		<div class="testimonial-col">
+			<img src="https://i.pinimg.com/originals/61/7a/ad/617aad2997f3cb7a9f6a60ddc9ffdc01.jpg" >
+			</div>
+				<p>
+				The most accurate weather forecasting website! this is great
+				</p>	
+				<h3>
+					User name
+				</h3>
+				<i class="fa-solid fa-star-christmas"></i>
+				<i class="fa-solid fa-star-christmas"></i>
+				<i class="fa-solid fa-star-christmas"></i>
+				<i class="fa-solid fa-star-christmas"></i>
+				<i class="fa-regular fa-star-christmas"></i>
+			</div>
+		</div>
+	<div class="testimonial-col">
+		<img src="https://i.pinimg.com/originals/61/7a/ad/617aad2997f3cb7a9f6a60ddc9ffdc01.jpg" >
+		</div>
+			<p>
+					The most accurate weather forecasting website! this is good
+			</p>	
+			<h3>
+				User name
+			</h3>
+			<i class="fa-solid fa-star-christmas"></i>
+			<i class="fa-solid fa-star-christmas"></i>
+			<i class="fa-solid fa-star-christmas"></i>
+			<i class="fa-regular fa-star-christmas"></i>
+			<i class="fa-regular fa-star-christmas"></i>
+	</div>
+</div>
+<div class="testimonial-col">
+	<img src="https://i.pinimg.com/originals/61/7a/ad/617aad2997f3cb7a9f6a60ddc9ffdc01.jpg" >
+	</div>
+		<p>
+				The most accurate weather forecasting website! this is awesome
+		</p>	
+		<h3>
+			User name
+		</h3>
+		<i class="fa-solid fa-star-christmas"></i>
+		<i class="fa-solid fa-star-christmas"></i>
+		<i class="fa-solid fa-star-christmas"></i>
+		<i class="fa-solid fa-star-christmas"></i>
+		<i class="fa-regular fa-star-christmas"></i>
+	</div>
+</div>
+</section>
+
+<!-- END CLASS  TESTIMONIALS -->
+
+<!-- CALL TO ACTION-->
+
+<section class="cta">
+	<h1>
+		Log in to load weather now!
+	</h1>
+	<a href="" class="hero-btn">LOGGIN</a>
+
+
+</section>
+<!-- END CALL TO ACTION ---------------------------------------------------------------------------------------------------------->
+
+<!-- ----------------- fotter------------------  -->
+
+<section class="footer">
+	<h4>
+		About us
+	</h4>
+	<p>
+		This was created for project purposes assessed by university authority. It is NOT intended for commercial use, 
+		Intended for educational and personal purposes only. 
+	</p>	
+	<div class="icon">
+		<i class="fa fa-facebook"></i>
+		<i class="fa fa-twitter"></i>
+		<i class="fa fa-instagram"></i>
+		<i class="fa fa-linkedin"></i>
+	</div>
+	<p>Made with <i class="fa-solid fa-head-side-heart"></i> by Sara Stanic </p>
+
+</section>
+
+
+
+
+
+
+
+
+
+	<!--  ---- JavaScript for Toggle Menu ---- -->
+		<script>
+			var navLinks=document.getElementById("navLinks")
+			function showMenu(){
+				navLinks.style.right="0"; //le leftmost dot up of the rectangle toughes the 0 of y axe
+
+			}
+			function hideMenu(){
+				navLinks.style.right="-200px" // this just moves the rectangle on the side to the right
+			}
+		
+		</script>
+
+	<!-- ----------- end JavaScript ------- -->
+
+	</body>
+</html

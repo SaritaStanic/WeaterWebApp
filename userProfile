@@ -1,0 +1,101 @@
+<?php
+include('session.php');
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+
+    <!--<meta charset="UTF-8">-->
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=egde">-->
+    <meta name ="viewport" content="with=device-width,initial scale=1.0"> 
+    <title>Weather Web-App</title>
+    <script src="https://kit.fontawesome.com/14988f2aa2.js" crossorigin="anonymous"></script>
+	    <link rel="stylesheet" href="style.css">
+	    <link rel="preconnect" href="https://fonts.googleapis.com">
+	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    	<link href="https://fonts.googleapis.com/css2?family=Anek+Tamil: wdth,wght@100,300;100,500;106.4,484&display=swap" rel="stylesheet">
+    	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+ 	
+    </head> 
+
+	<body>  
+		<header>
+		    <section class="pre-header">
+			    <nav>
+				    <img class="logo" src="https://www.onlygfx.com/wp-content/uploads/2016/10/watercolor-cloud-8.png" alt="logo">
+    
+				    <ul class="navigation">
+					    <li><a href="#">HOME</a> </li>
+					    <li><a href="#">LOCATION</a> </li>
+					    <li><a href="#">FORECAST</a> </li>
+					    <li><a href="#">MEDIA</a> </li>
+					    <li><a href="#">ABOUT</a> </li>
+					    <li><a href="#">CONTACT</a> </li>
+				    </ul>
+			    </nav>
+
+		    </section>
+	    </header>
+    <!--- CLASS HEADER --------------------------------------------------------------------------------------------------------->
+	    	<section class="sub-header">
+    
+    
+    
+	    		<div class="text-box"> <!-- where we also put the image-->
+
+				    <h1>Welcome!</h1>
+			    	<p>This is the homepage page once the user loggs in
+		    		</p>
+	    			<!--adding a button with anchor tag-->
+    
+
+			    </div>
+			    <div id="profile">
+				    <b id="welcome">Welcome : <i><?php echo $login_session; ?></i></b>
+			    	<b id="logout"><a href="action-logout_page.php">Log Out</a></b>
+		    		</div>
+	    	</section>
+    <!-- END HEADER -------------------------------------------------------------------------- --->
+    <!-- the content of landing page-->
+    <section>
+	    <div class="row">
+		    <div class="landing-col">
+			<!-- here we want a picture of the avatar chosen,
+
+			underneath will be the location of the avatar in question
+			then the avatar in question with the location will get their own 
+			current weather and
+				 forecast for the day
+			 underneath there will be a button for weekly forecast 
+			underneath there will be other locations
+			underneath there will be friends and their weather conditions 
+			and the feedback on how it really feels so people can state how it feels ourside.
+			we can do a statistics on that but it's not too important right now.
+			-->
+		    </div>
+	
+	    </div>
+    </section>
+    <!-- end of content of landing page-->
+    <!-- ----------------- fotter------------------  -->
+    <section class="footer">
+	    <h4>
+		    About us
+	    </h4>
+	    <p>
+		    This was created for project purposes assessed by university authority. It is NOT intended for commercial use, 
+		    Intended for educational and personal purposes only. 
+    	</p>	    
+	    <div class="icon">
+		    <i class="fa fa-facebook"></i>
+		    <i class="fa fa-twitter"></i>
+		    <i class="fa fa-instagram"></i>
+		    <i class="fa fa-linkedin"></i>
+	    </div>
+	    <p>Made with <i class="fa-solid fa-head-side-heart"></i> by Sara Stanic </p>
+
+    </section>
+    <!-- end footer----------------------------------------------------------------------------------->
+
+	</body>
+</html>
