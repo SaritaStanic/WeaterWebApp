@@ -1,0 +1,80 @@
+<?php
+
+$host="Localhost";
+$user= "root";
+$password="";
+$db="demo";
+
+ //logging in with sessions
+ session_start();
+ connect();// connect to database
+ $error=''; //storing error message in this variable
+
+
+    // Store Session Data
+    $_SESSION['login_user']= $username;  // Initializing Session with value of PHP Variable
+    echo $_SESSION['login_user'];
+
+    if(isset($_POST['submit'])){//user clicks submit
+        if (empty($_POST['username']) || empty($_POST['name'])||empty($_POST['email']) || empty($_POST['password'] )) {
+            $error = "The fields are required";//fields cannot be empty
+        }else
+        {
+        //defined user:
+        $email=$_POST['email'];
+        $name=$_POST['name'];
+        $unname=$_POST['username'];
+        $password=$_POST['password'];
+
+        ////////////TODO: demo database with table loginform needs to be expanded to 5 columns!
+
+          // To protect MySQL injection for Security purpose
+          $name = stripslashes($name);
+          $email = stripslashes($email);
+          $username = stripslashes($username);
+          $password = stripslashes($password);
+          $name= mysql_real_escape_string($name);
+          $email = mysql_real_escape_string($email);
+          $username = mysql_real_escape_string($username);
+          $password = mysql_real_escape_string($password);
+
+         // Create connection
+          $conection = mysql_connect($host,$name,$email$user,$password); 
+          // Check connection
+            if ($conection->connect_error) {//there musn't be any connection errors
+                die("Connection failed: " . $conection->connect_error);
+            }else
+            {
+                $db = mysql_select_db($db, $conection);
+
+        
+                //adding new data
+                 $sql="INSERT INTO loginform( Name,Email,User,Pass) VALUES($name,$email,$username,$password)";
+                 //check if correct data inserted into form
+                if ($conection->query($sql) === TRUE ) { 
+                    echo "Profile created successfully";
+                    $_SESSION['login_user']=$username; // Initializing Session
+                    header("location:profile.php"); // Redirecting To Other Page
+
+                ////////////TODO: create a capability of storing preferences and loading them once the user logs in
+                ////////////      else, the default choice of location will be offered with the capability to change the location
+
+                } else //otherwise no connection possible to establiched with wrong data insertion
+                {
+                    echo "Error: " . $sql . "<br>" . $conection->error;
+                }
+            }
+
+            $conection->close(); //closing database
+
+        }
+    }elseif(isset($_POST['cancel']))
+    {// user clicks on cancel the program returns him to the landing page
+        exit();
+        
+        session_destroy(); // Is Used To Destroy All Sessions
+        header("location: index.html");
+
+
+    }
+?>
